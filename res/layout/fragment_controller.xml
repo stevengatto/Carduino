@@ -30,6 +30,7 @@
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/btns_left_and_right"
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
@@ -55,8 +56,12 @@
 
     </LinearLayout>
 
-
-
+    <ImageButton
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:background="@drawable/btn_launch"
+            android:layout_alignStart="@id/btns_left_and_right"
+            android:layout_marginTop="50dp"/>
 
 
 </RelativeLayout>
