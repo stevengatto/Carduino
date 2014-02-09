@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <PreferenceCategory
+            android:title="Arduino Host Information">
+
+    <EditTextPreference
+            android:key="pref_key_host_ip"
+            android:title="IP Address"
+            android:summary="The IP address of the Arduino wifi shield to connect to"
+            android:dialogTitle="Host IP"
+            android:inputType="number"/>
+
+    <EditTextPreference
+            android:key="pref_key_host_port"
+            android:title="Port"
+            android:summary="The port of the Arduino wifi shield to connect to"
+            android:dialogTitle="Host port"
+            android:inputType="number"/>
+
+
+    </PreferenceCategory>
+
+
+
+
+</PreferenceScreen>
