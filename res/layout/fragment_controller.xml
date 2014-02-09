@@ -22,10 +22,8 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/arrow_down"/>
-
-
-
+                android:background="@drawable/arrow_down"
+                android:id="@+id/button_down"/>
     </LinearLayout>
 
     <!-- Left and right buttons -->
@@ -43,12 +41,15 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/arrow_left"/>
+                android:background="@drawable/arrow_left"
+                android:id="@+id/button_left"/>
 
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/arrow_right"/>
+                android:background="@drawable/arrow_right"
+                android:id="@+id/button_right"/>
+
 
 
 
