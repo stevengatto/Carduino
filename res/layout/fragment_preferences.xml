@@ -10,8 +10,7 @@
             android:key="pref_key_host_ip"
             android:title="IP Address"
             android:summary="The IP address of the Arduino wifi shield to connect to"
-            android:dialogTitle="Host IP"
-            android:inputType="number"/>
+            android:dialogTitle="Host IP"/>
 
     <EditTextPreference
             android:key="pref_key_host_port"
