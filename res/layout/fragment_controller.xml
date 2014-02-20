@@ -7,7 +7,7 @@
     <Button android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/button_power"
-            android:background="@drawable/button_power_off"
+            android:background="@drawable/btn_power_off"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"/>

@@ -55,11 +55,11 @@ public class ControllerFragment extends Fragment {
             public void onClick(View powerButton) {
                 if (UDPMailMan.isRunning()) {
                     UDPMailMan.setRunningState(false);
-                    powerButton.setBackgroundResource(R.drawable.button_power_off);
+                    powerButton.setBackgroundResource(R.drawable.btn_power_off);
                 }
                 else {
                     UDPMailMan.setRunningState(true);
-                    powerButton.setBackgroundResource(R.drawable.button_power);
+                    powerButton.setBackgroundResource(R.drawable.btn_power_on);
                     UDPMailMan.beginUdpLoop();
                 }
             }
