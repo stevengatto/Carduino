@@ -11,7 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import com.fsc.Datagram.UDPMailMan;
+import com.fsc.Carduino.Datagram.UDPMailMan;
 
 /**
  * Fragment to display car controller
@@ -47,6 +47,24 @@ public class ControllerFragment extends Fragment {
         View viewTreeRoot = inflater.inflate(R.layout.fragment_controller, container, false);
 
         // Set callbacks for all buttons
+
+        Button powerButton = (Button) viewTreeRoot.findViewById(R.id.button_power);
+        powerButton.setActivated(false);
+        powerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View powerButton) {
+                if (UDPMailMan.isRunning()) {
+                    UDPMailMan.setRunningState(false);
+                    powerButton.setBackgroundResource(R.drawable.button_power_off);
+                }
+                else {
+                    UDPMailMan.setRunningState(true);
+                    powerButton.setBackgroundResource(R.drawable.button_power);
+                    UDPMailMan.beginUdpLoop();
+                }
+            }
+        });
+
         Button upButton = (Button) viewTreeRoot.findViewById(R.id.button_up);
         upButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -107,16 +125,13 @@ public class ControllerFragment extends Fragment {
                         UDPMailMan.right = true;
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPMailMan .right = false;
+                        UDPMailMan.right = false;
                         break;
                 }
                 return true;
             }
 
         });
-
-        // Begin sending out UDP packets
-        UDPMailMan.beginUdpLoop();
 
         return viewTreeRoot;
     }

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Carduino.iml" filepath="$PROJECT_DIR$/Carduino.iml" />
-      <module fileurl="file://$USER_HOME$/Datagram/Datagram.iml" filepath="$USER_HOME$/Datagram/Datagram.iml" />
     </modules>
   </component>
 </project>

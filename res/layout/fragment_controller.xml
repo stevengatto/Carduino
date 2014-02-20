@@ -4,6 +4,14 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <Button android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/button_power"
+            android:background="@drawable/button_power_off"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
     <!-- Forward and reverse buttons -->
     <LinearLayout
             android:layout_width="wrap_content"
@@ -11,8 +19,9 @@
             android:orientation="vertical"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:paddingBottom="60dp"
-            android:paddingLeft="150dp">
+            android:paddingBottom="0dp"
+            android:paddingLeft="0dp" android:padding="0dp" android:paddingTop="0dp" android:paddingRight="0dp"
+            android:layout_marginLeft="50dp" android:layout_marginBottom="50dp">
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -34,8 +43,7 @@
             android:orientation="horizontal"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:paddingBottom="90dp"
-            android:paddingRight="100dp">
+            android:layout_marginRight="50dp" android:layout_marginBottom="85dp">
 
 
 
@@ -55,13 +63,6 @@
 
 
     </LinearLayout>
-
-    <ImageButton
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:background="@drawable/btn_launch"
-            android:layout_alignStart="@id/btns_left_and_right"
-            android:layout_marginTop="50dp"/>
 
 
 </RelativeLayout>
