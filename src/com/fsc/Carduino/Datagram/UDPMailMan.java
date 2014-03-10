@@ -26,6 +26,9 @@ public class UDPMailMan {
     public static boolean reverse = false;
     public static boolean left = false;
     public static boolean right = false;
+    public static boolean stop = false;
+    public static boolean realign = false;
+    public static boolean authenticate = false;
 
     // Specifies whether the mail man is running
     private static boolean isRunning = false;
@@ -90,7 +93,7 @@ public class UDPMailMan {
 
 
                         if (forward) {
-                            String data = "forward";
+                            String data = "d";
                             int msg_length=data.length();
                             byte[] message = data.getBytes();
                             packet = new DatagramPacket(message, msg_length, local,port);
@@ -98,7 +101,7 @@ public class UDPMailMan {
 
                         }
                         else if(reverse) {
-                            String data = "reverse";
+                            String data = "b";
                             int msg_length=data.length();
                             byte[] message = data.getBytes();
                             packet = new DatagramPacket(message, msg_length, local,port);
@@ -106,7 +109,7 @@ public class UDPMailMan {
                         }
 
                         if (left) {
-                            String data = "left";
+                            String data = "l";
                             int msg_length=data.length();
                             byte[] message = data.getBytes();
                             packet = new DatagramPacket(message, msg_length, local,port);
@@ -114,12 +117,44 @@ public class UDPMailMan {
 
                         }
                         else if (right) {
-                            String data = "right";
+                            String data = "r";
+                            int msg_length = data.length();
+                            byte[] message = data.getBytes();
+                            packet = new DatagramPacket(message, msg_length, local, port);
+                            socket.send(packet);
+                        }
+
+                        /*stop simply ends up killing power to the motor in a specific direction
+                          This must be sent every time you release a forward or back button */
+                        else if (stop) {
+                            String data = "p";
+                            int msg_length = data.length();
+                            byte[] message = data.getBytes();
+                            packet = new DatagramPacket(message, msg_length, local, port);
+                            socket.send(packet);
+                        }
+                        /*
+                            realign simply sends the signal "s" for straighten out the wheels by shifting the servo from
+                            80/100 degrees back to 90 degrees or straight ahead.
+                         */
+                        else if (realign) {
+                            String data = "s"; //we should
                             int msg_length=data.length();
                             byte[] message = data.getBytes();
                             packet = new DatagramPacket(message, msg_length, local,port);
                             socket.send(packet);
                         }
+                        /*
+                            authenticate sends the "hello" authentication string to the Engineering UDP server
+                        */
+                        else if (authenticate) {
+                            String data = "hello"; //we should
+                            int msg_length = data.length();
+                            byte[] message = data.getBytes();
+                            packet = new DatagramPacket(message, msg_length, local, port);
+                            socket.send(packet);
+                        }
+
 
                     } catch (SocketException e) {
                         Log.e(TAG, "Socket exception!", e);

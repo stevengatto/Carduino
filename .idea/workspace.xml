@@ -2,16 +2,23 @@
 <project version="4">
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
-      <GlobalState>
-        <option name="visible" value="false" />
-      </GlobalState>
+      <GlobalState />
     </option>
   </component>
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <target>android-19</target>
+      </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/activity_controller.xml">
+        <config>
+          <device>Nexus 4</device>
+          <state>Landscape</state>
+          <theme>@android:style/Theme.Holo</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
         <config>
           <device>7in WSVGA (Tablet)</device>
@@ -26,9 +33,16 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d2dbf20-d0cf-4afe-9ed9-d97fcef6e302" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/button_power.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-mdpi/button_power_off.png" />
+    <list default="true" id="4d2dbf20-d0cf-4afe-9ed9-d97fcef6e302" name="Default" comment="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java" afterPath="$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datagram/Datagram.iml" afterPath="$PROJECT_DIR$/../Datagram/Datagram.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fsc/Carduino/Datagram/UDPMailMan.java" afterPath="$PROJECT_DIR$/src/com/fsc/Carduino/Datagram/UDPMailMan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fragment_controller.xml" afterPath="$PROJECT_DIR$/res/layout/fragment_controller.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datagram/project.properties" afterPath="$PROJECT_DIR$/../Datagram/project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Carduino.iws" />
@@ -84,53 +98,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$USER_HOME$/Datagram/src/com/fsc/Datagram/UDPMailMan.java" line="147" class="com.fsc.Datagram.UDPMailMan" package="com.fsc.Datagram">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$USER_HOME$/Datagram/src/com/fsc/Datagram/UDPMailMan.java" line="71" class="com.fsc.Datagram.UDPMailMan" package="com.fsc.Datagram">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$USER_HOME$/Datagram/src/com/fsc/Datagram/UDPMailMan.java" line="74" class="com.fsc.Datagram.UDPMailMan" package="com.fsc.Datagram">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -142,76 +110,45 @@
     <leaf>
       <file leaf-file-name="activity_controller.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/activity_controller.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="313" selection-end="515" vertical-scroll-proportion="-0.0" vertical-offset="90" max-vertical-offset="285">
+            <state line="6" column="0" selection-start="313" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="342">
               <folding />
             </state>
           </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_controller.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fragment_controller.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="711" selection-end="754" vertical-scroll-proportion="-4.7058825" vertical-offset="84" max-vertical-offset="1224">
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="75" selection-start="549" selection-end="549" vertical-scroll-proportion="0.34951457" vertical-offset="0" max-vertical-offset="1095">
-              <folding />
-            </state>
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="55" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="660">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_preferences.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_preferences.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="33" selection-start="264" selection-end="297" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerFragment.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ControllerFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="83" selection-start="5115" selection-end="5115" vertical-scroll-proportion="0.0" vertical-offset="1308" max-vertical-offset="1875">
+            <state line="58" column="46" selection-start="2388" selection-end="2388" vertical-scroll-proportion="-1.3013245" vertical-offset="1830" max-vertical-offset="2772">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2054#2779#0" expanded="true" />
+                <element signature="e#2768#2769#0" expanded="true" />
+                <element signature="e#2897#3533#0" expanded="true" />
+                <element signature="e#3521#3522#0" expanded="true" />
+                <element signature="e#3657#4323#0" expanded="true" />
+                <element signature="e#4311#4312#0" expanded="true" />
+                <element signature="e#4447#5144#0" expanded="true" />
+                <element signature="e#5132#5133#0" expanded="true" />
+                <element signature="e#5271#5927#0" expanded="true" />
+                <element signature="e#5915#5916#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Datagram/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="25" selection-start="746" selection-end="746" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
-              <folding>
-                <element signature="e#657#675#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Datagram.iml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Datagram/Datagram.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -219,17 +156,11 @@
       <file leaf-file-name="UDPMailMan.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/Datagram/UDPMailMan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="61" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0" vertical-offset="778" max-vertical-offset="2190">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreferencesActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285">
-              <folding />
+            <state line="30" column="47" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0" vertical-offset="588" max-vertical-offset="3330">
+              <folding>
+                <element signature="e#2465#6646#0" expanded="true" />
+                <element signature="e#6635#6636#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -242,6 +173,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Nicholas Rosato" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -264,17 +200,16 @@
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$USER_HOME$/Datagram/AndroidManifest.xml" />
         <option value="$USER_HOME$/Datagram/src/com/fsc/Datagram/UDPMailMan.java" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_controller.xml" />
         <option value="$PROJECT_DIR$/src/com/fsc/Carduino/Datagram/UDPMailMan.java" />
         <option value="$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_controller.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="220" />
-    <option name="y" value="28" />
-    <option name="width" value="1870" />
-    <option name="height" value="1052" />
+    <option name="x" value="-2" />
+    <option name="width" value="1924" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -392,61 +327,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Carduino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Carduino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Carduino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Carduino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-xhdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Carduino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Carduino" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-mdpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -465,7 +346,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../j--" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -527,19 +408,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -565,6 +433,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -626,7 +507,7 @@
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
@@ -709,37 +590,37 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="220" y="28" width="1870" height="1052" extended-state="0" />
+    <frame x="-2" y="0" width="1924" height="1057" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41506323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39434364" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25559106" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45614034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34835166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32800853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34824282" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5106622" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21801706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09543569" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="150" y="128" width="1670" height="852" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5106622" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Chat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -763,7 +644,9 @@
     <MESSAGE value="Preferences implemented, app uses saved ip and port, places user in settings if settigns not set&#10;" />
     <MESSAGE value="Added nuculur button" />
     <MESSAGE value="Removed dependency on Datagram, moved functionality inside app. Now have toggleable button to turn controller on and off. Successfully communicates with arduino" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed dependency on Datagram, moved functionality inside app. Now have toggleable button to turn controller on and off. Successfully communicates with arduino" />
+    <MESSAGE value="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -778,185 +661,219 @@
     <option name="showOnlyWarnings" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_action_settings.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_controller.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="184" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
-          <folding>
-            <element signature="e#358#376#0" expanded="true" />
-            <element signature="e#556#574#0" expanded="false" />
-            <element signature="e#940#958#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/action_bar_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
+        <state line="6" column="0" selection-start="313" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="342">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_preferences.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="41" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="495">
+        <state line="12" column="45" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1314">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/arrow_left.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="27" selection-start="4419" selection-end="4419" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="1935">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Datagram/src/com/fsc/Datagram/UDPMailMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="41" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1575">
-          <folding>
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#2337#4754#0" expanded="true" />
-            <element signature="e#4743#4744#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="73" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="64" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_action_settings.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="184" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
-          <folding>
-            <element signature="e#358#376#0" expanded="true" />
-            <element signature="e#556#574#0" expanded="false" />
-            <element signature="e#940#958#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/action_bar_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_preferences.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="41" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/arrow_left.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="27" selection-start="4419" selection-end="4419" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="1935">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Datagram/src/com/fsc/Datagram/UDPMailMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="43" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1575">
-          <folding>
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#2337#4754#0" expanded="true" />
-            <element signature="e#4743#4744#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="73" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="55" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="660">
+        <state line="30" column="55" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="792" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_preferences.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="33" selection-start="264" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="216">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="1" selection-start="5115" selection-end="5115" vertical-scroll-proportion="0.0" vertical-offset="2466" max-vertical-offset="2592">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2054#2779#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2897#3533#0" expanded="true" />
+            <element signature="e#3521#3522#0" expanded="true" />
+            <element signature="e#3657#4323#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4447#5144#0" expanded="true" />
+            <element signature="e#5132#5133#0" expanded="true" />
+            <element signature="e#5271#5927#0" expanded="true" />
+            <element signature="e#5915#5916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/Datagram/UDPMailMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="52" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="2988" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_action_settings.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="184" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
+          <folding>
+            <element signature="e#358#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/action_bar_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_preferences.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="41" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/arrow_left.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="27" selection-start="4419" selection-end="4419" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="1935">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2054#2779#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2897#3533#0" expanded="true" />
+            <element signature="e#3521#3522#0" expanded="true" />
+            <element signature="e#3657#4323#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4447#5144#0" expanded="true" />
+            <element signature="e#5132#5133#0" expanded="true" />
+            <element signature="e#5271#5927#0" expanded="true" />
+            <element signature="e#5915#5916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="73" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="64" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_action_settings.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="184" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
+          <folding>
+            <element signature="e#358#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/action_bar_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_preferences.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="41" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/arrow_left.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="27" selection-start="4419" selection-end="4419" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="1935">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2054#2779#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2897#3533#0" expanded="true" />
+            <element signature="e#3521#3522#0" expanded="true" />
+            <element signature="e#3657#4323#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4447#5144#0" expanded="true" />
+            <element signature="e#5132#5133#0" expanded="true" />
+            <element signature="e#5271#5927#0" expanded="true" />
+            <element signature="e#5915#5916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="73" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="55" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="660" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="64" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285">
-          <folding />
-        </state>
+        <state line="10" column="64" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_action_settings.png">
@@ -969,27 +886,23 @@
         <state line="21" column="184" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
           <folding>
             <element signature="e#358#376#0" expanded="true" />
-            <element signature="e#556#574#0" expanded="false" />
-            <element signature="e#940#958#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/action_bar_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="7" column="37" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_preferences.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="41" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="495">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/arrow_left.png">
@@ -999,30 +912,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285">
-          <folding />
-        </state>
+        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="73" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Datagram/src/com/fsc/Datagram/UDPMailMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="23" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1500">
-          <folding>
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#2337#4754#0" expanded="true" />
-            <element signature="e#4743#4744#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="28" column="73" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
@@ -1030,25 +925,33 @@
         <state line="102" column="21" selection-start="3508" selection-end="3508" vertical-scroll-proportion="0.0" vertical-offset="1081" max-vertical-offset="1710">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2054#2779#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2897#3533#0" expanded="true" />
+            <element signature="e#3521#3522#0" expanded="true" />
+            <element signature="e#3657#4323#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4447#5144#0" expanded="true" />
+            <element signature="e#5132#5133#0" expanded="true" />
+            <element signature="e#5271#5927#0" expanded="true" />
+            <element signature="e#5915#5916#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="28" selection-start="806" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/action_bar_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="7" column="37" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_action_settings.png">
@@ -1058,9 +961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510">
-          <folding />
-        </state>
+        <state line="28" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/arrow_down.png">
@@ -1069,59 +970,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_preferences.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state line="12" column="41" selection-start="519" selection-end="519" vertical-scroll-proportion="-3.6734693" vertical-offset="0" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_controller.xml">
-      <provider editor-type-id="android-designer">
+      <provider selected="true" editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="313" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="285">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="55" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="30" column="55" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
+        <state line="10" column="43" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/PreferencesFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="64" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
+        <state line="10" column="64" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/arrow_left.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_preferences.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="33" selection-start="264" selection-end="297" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -1133,59 +1008,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Datagram/Datagram.iml">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_preferences.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+        <state line="6" column="33" selection-start="264" selection-end="297" vertical-scroll-proportion="0.20224719" vertical-offset="0" max-vertical-offset="534">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Datagram/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="746" selection-end="746" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
-          <folding>
-            <element signature="e#657#675#0" expanded="true" />
-          </folding>
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Datagram/src/com/fsc/Datagram/UDPMailMan.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_controller.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="44" selection-start="1878" selection-end="1878" vertical-scroll-proportion="0.0" vertical-offset="614" max-vertical-offset="2295">
-          <folding>
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#2337#4754#0" expanded="true" />
-            <element signature="e#4743#4744#0" expanded="true" />
-          </folding>
+        <state line="6" column="0" selection-start="313" selection-end="515" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="342">
+          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="711" selection-end="754" vertical-scroll-proportion="-4.7058825" vertical-offset="84" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/Datagram/UDPMailMan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="61" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0" vertical-offset="778" max-vertical-offset="2190">
-          <folding />
+        <state line="30" column="47" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0" vertical-offset="588" max-vertical-offset="3330">
+          <folding>
+            <element signature="e#2465#6646#0" expanded="true" />
+            <element signature="e#6635#6636#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="83" selection-start="5115" selection-end="5115" vertical-scroll-proportion="0.0" vertical-offset="1308" max-vertical-offset="1875">
+        <state line="58" column="46" selection-start="2388" selection-end="2388" vertical-scroll-proportion="-1.3013245" vertical-offset="1830" max-vertical-offset="2772">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2054#2779#0" expanded="true" />
+            <element signature="e#2768#2769#0" expanded="true" />
+            <element signature="e#2897#3533#0" expanded="true" />
+            <element signature="e#3521#3522#0" expanded="true" />
+            <element signature="e#3657#4323#0" expanded="true" />
+            <element signature="e#4311#4312#0" expanded="true" />
+            <element signature="e#4447#5144#0" expanded="true" />
+            <element signature="e#5132#5133#0" expanded="true" />
+            <element signature="e#5271#5927#0" expanded="true" />
+            <element signature="e#5915#5916#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="75" selection-start="549" selection-end="549" vertical-scroll-proportion="0.34951457" vertical-offset="0" max-vertical-offset="1095">
-          <folding />
         </state>
       </provider>
     </entry>
