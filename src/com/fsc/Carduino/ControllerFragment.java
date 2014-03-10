@@ -56,13 +56,14 @@ public class ControllerFragment extends Fragment {
                 if (UDPMailMan.isRunning()) {
                     UDPMailMan.setRunningState(false);
                     powerButton.setBackgroundResource(R.drawable.button_power_off);
-                    UDPMailMan.authenticate = true; //authenticate to the server
-                    UDPMailMan.authenticate = false; // stop sending authentication messages
+
                 }
                 else {
                     UDPMailMan.setRunningState(true);
                     powerButton.setBackgroundResource(R.drawable.button_power);
                     UDPMailMan.beginUdpLoop();
+                    UDPMailMan.authenticate = true; //authenticate to the server
+                    UDPMailMan.authenticate = false; // stop sending authentication messages
                 }
             }
         });

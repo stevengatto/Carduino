@@ -34,6 +34,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d2dbf20-d0cf-4afe-9ed9-d97fcef6e302" name="Default" comment="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java" afterPath="$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Carduino.iws" />
@@ -126,19 +127,19 @@
       <file leaf-file-name="ControllerFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="0" selection-start="4336" selection-end="5968" vertical-scroll-proportion="1.9802631" vertical-offset="858" max-vertical-offset="2772">
+            <state line="65" column="92" selection-start="2738" selection-end="2738" vertical-scroll-proportion="0.19011407" vertical-offset="1020" max-vertical-offset="2790">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2054#2779#0" expanded="true" />
-                <element signature="e#2768#2769#0" expanded="true" />
-                <element signature="e#2897#3533#0" expanded="true" />
-                <element signature="e#3521#3522#0" expanded="true" />
-                <element signature="e#3657#4323#0" expanded="true" />
-                <element signature="e#4311#4312#0" expanded="true" />
-                <element signature="e#4447#5144#0" expanded="true" />
-                <element signature="e#5132#5133#0" expanded="true" />
-                <element signature="e#5271#5927#0" expanded="true" />
-                <element signature="e#5915#5916#0" expanded="true" />
+                <element signature="e#2054#2780#0" expanded="true" />
+                <element signature="e#2769#2770#0" expanded="true" />
+                <element signature="e#2898#3534#0" expanded="true" />
+                <element signature="e#3522#3523#0" expanded="true" />
+                <element signature="e#3658#4324#0" expanded="true" />
+                <element signature="e#4312#4313#0" expanded="true" />
+                <element signature="e#4448#5145#0" expanded="true" />
+                <element signature="e#5133#5134#0" expanded="true" />
+                <element signature="e#5272#5928#0" expanded="true" />
+                <element signature="e#5916#5917#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -542,6 +543,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4d2dbf20-d0cf-4afe-9ed9-d97fcef6e302" name="Default" comment="" />
+      <changelist id="" name="Nick's first change" comment="Added functionality for scotland engineering team. " />
       <created>1391802902179</created>
       <updated>1391802902179</updated>
     </task>
@@ -585,7 +587,11 @@
       <created>1394424436411</created>
       <updated>1394424436411</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added functionality for scotland engineering team.">
+      <created>1394424648134</created>
+      <updated>1394424648134</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -593,7 +599,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13099042" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39434364" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -611,7 +617,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21801706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1673774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09543569" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="150" y="128" width="1670" height="852" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5106622" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -644,7 +650,8 @@
     <MESSAGE value="Added nuculur button" />
     <MESSAGE value="Removed dependency on Datagram, moved functionality inside app. Now have toggleable button to turn controller on and off. Successfully communicates with arduino" />
     <MESSAGE value="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;" />
+    <MESSAGE value="Added functionality for scotland engineering team." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality for scotland engineering team." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -700,16 +707,16 @@
         <state line="137" column="1" selection-start="5115" selection-end="5115" vertical-scroll-proportion="0.0" vertical-offset="2466" max-vertical-offset="2592">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2054#2779#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
-            <element signature="e#2897#3533#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3657#4323#0" expanded="true" />
-            <element signature="e#4311#4312#0" expanded="true" />
-            <element signature="e#4447#5144#0" expanded="true" />
-            <element signature="e#5132#5133#0" expanded="true" />
-            <element signature="e#5271#5927#0" expanded="true" />
-            <element signature="e#5915#5916#0" expanded="true" />
+            <element signature="e#2054#2780#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2898#3534#0" expanded="true" />
+            <element signature="e#3522#3523#0" expanded="true" />
+            <element signature="e#3658#4324#0" expanded="true" />
+            <element signature="e#4312#4313#0" expanded="true" />
+            <element signature="e#4448#5145#0" expanded="true" />
+            <element signature="e#5133#5134#0" expanded="true" />
+            <element signature="e#5272#5928#0" expanded="true" />
+            <element signature="e#5916#5917#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -733,7 +740,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="184" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
           <folding>
-            <element signature="e#358#376#0" expanded="true" />
+            <element signature="e#358#376#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -763,16 +770,16 @@
         <state line="118" column="27" selection-start="4419" selection-end="4419" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="1935">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2054#2779#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
-            <element signature="e#2897#3533#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3657#4323#0" expanded="true" />
-            <element signature="e#4311#4312#0" expanded="true" />
-            <element signature="e#4447#5144#0" expanded="true" />
-            <element signature="e#5132#5133#0" expanded="true" />
-            <element signature="e#5271#5927#0" expanded="true" />
-            <element signature="e#5915#5916#0" expanded="true" />
+            <element signature="e#2054#2780#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2898#3534#0" expanded="true" />
+            <element signature="e#3522#3523#0" expanded="true" />
+            <element signature="e#3658#4324#0" expanded="true" />
+            <element signature="e#4312#4313#0" expanded="true" />
+            <element signature="e#4448#5145#0" expanded="true" />
+            <element signature="e#5133#5134#0" expanded="true" />
+            <element signature="e#5272#5928#0" expanded="true" />
+            <element signature="e#5916#5917#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,7 +808,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="184" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
           <folding>
-            <element signature="e#358#376#0" expanded="true" />
+            <element signature="e#358#376#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -831,16 +838,16 @@
         <state line="118" column="27" selection-start="4419" selection-end="4419" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="1935">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2054#2779#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
-            <element signature="e#2897#3533#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3657#4323#0" expanded="true" />
-            <element signature="e#4311#4312#0" expanded="true" />
-            <element signature="e#4447#5144#0" expanded="true" />
-            <element signature="e#5132#5133#0" expanded="true" />
-            <element signature="e#5271#5927#0" expanded="true" />
-            <element signature="e#5915#5916#0" expanded="true" />
+            <element signature="e#2054#2780#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2898#3534#0" expanded="true" />
+            <element signature="e#3522#3523#0" expanded="true" />
+            <element signature="e#3658#4324#0" expanded="true" />
+            <element signature="e#4312#4313#0" expanded="true" />
+            <element signature="e#4448#5145#0" expanded="true" />
+            <element signature="e#5133#5134#0" expanded="true" />
+            <element signature="e#5272#5928#0" expanded="true" />
+            <element signature="e#5916#5917#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -884,7 +891,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="184" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
           <folding>
-            <element signature="e#358#376#0" expanded="true" />
+            <element signature="e#358#376#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -924,16 +931,16 @@
         <state line="102" column="21" selection-start="3508" selection-end="3508" vertical-scroll-proportion="0.0" vertical-offset="1081" max-vertical-offset="1710">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2054#2779#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
-            <element signature="e#2897#3533#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3657#4323#0" expanded="true" />
-            <element signature="e#4311#4312#0" expanded="true" />
-            <element signature="e#4447#5144#0" expanded="true" />
-            <element signature="e#5132#5133#0" expanded="true" />
-            <element signature="e#5271#5927#0" expanded="true" />
-            <element signature="e#5915#5916#0" expanded="true" />
+            <element signature="e#2054#2780#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2898#3534#0" expanded="true" />
+            <element signature="e#3522#3523#0" expanded="true" />
+            <element signature="e#3658#4324#0" expanded="true" />
+            <element signature="e#4312#4313#0" expanded="true" />
+            <element signature="e#4448#5145#0" expanded="true" />
+            <element signature="e#5133#5134#0" expanded="true" />
+            <element signature="e#5272#5928#0" expanded="true" />
+            <element signature="e#5916#5917#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1002,7 +1009,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="3" selection-start="329" selection-end="329" vertical-scroll-proportion="0.27027026" vertical-offset="0" max-vertical-offset="495">
           <folding>
-            <element signature="e#358#376#0" expanded="true" />
+            <element signature="e#358#376#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1049,19 +1056,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="0" selection-start="4336" selection-end="5968" vertical-scroll-proportion="1.9802631" vertical-offset="858" max-vertical-offset="2772">
+        <state line="65" column="92" selection-start="2738" selection-end="2738" vertical-scroll-proportion="0.19011407" vertical-offset="1020" max-vertical-offset="2790">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2054#2779#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
-            <element signature="e#2897#3533#0" expanded="true" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3657#4323#0" expanded="true" />
-            <element signature="e#4311#4312#0" expanded="true" />
-            <element signature="e#4447#5144#0" expanded="true" />
-            <element signature="e#5132#5133#0" expanded="true" />
-            <element signature="e#5271#5927#0" expanded="true" />
-            <element signature="e#5915#5916#0" expanded="true" />
+            <element signature="e#2054#2780#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2898#3534#0" expanded="true" />
+            <element signature="e#3522#3523#0" expanded="true" />
+            <element signature="e#3658#4324#0" expanded="true" />
+            <element signature="e#4312#4313#0" expanded="true" />
+            <element signature="e#4448#5145#0" expanded="true" />
+            <element signature="e#5133#5134#0" expanded="true" />
+            <element signature="e#5272#5928#0" expanded="true" />
+            <element signature="e#5916#5917#0" expanded="true" />
           </folding>
         </state>
       </provider>
