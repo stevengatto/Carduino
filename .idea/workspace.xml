@@ -34,15 +34,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d2dbf20-d0cf-4afe-9ed9-d97fcef6e302" name="Default" comment="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java" afterPath="$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datagram/Datagram.iml" afterPath="$PROJECT_DIR$/../Datagram/Datagram.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/fsc/Carduino/Datagram/UDPMailMan.java" afterPath="$PROJECT_DIR$/src/com/fsc/Carduino/Datagram/UDPMailMan.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/fragment_controller.xml" afterPath="$PROJECT_DIR$/res/layout/fragment_controller.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Datagram/project.properties" afterPath="$PROJECT_DIR$/../Datagram/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Carduino.iws" />
@@ -123,7 +114,7 @@
       <file leaf-file-name="fragment_controller.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="711" selection-end="754" vertical-scroll-proportion="-4.7058825" vertical-offset="84" max-vertical-offset="1224">
+            <state line="18" column="0" selection-start="707" selection-end="750" vertical-scroll-proportion="-4.7058825" vertical-offset="84" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -135,7 +126,7 @@
       <file leaf-file-name="ControllerFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="46" selection-start="2388" selection-end="2388" vertical-scroll-proportion="-1.3013245" vertical-offset="1830" max-vertical-offset="2772">
+            <state line="110" column="63" selection-start="4561" selection-end="4561" vertical-scroll-proportion="0.16447368" vertical-offset="1830" max-vertical-offset="2772">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2054#2779#0" expanded="true" />
@@ -356,9 +347,9 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -586,12 +577,16 @@
       <created>1392876699946</created>
       <updated>1392876699946</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;">
+      <created>1394424364337</created>
+      <updated>1394424364337</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1924" height="1057" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -605,7 +600,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32800853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34824282" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1030,7 +1025,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_controller.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="711" selection-end="754" vertical-scroll-proportion="-4.7058825" vertical-offset="84" max-vertical-offset="1224">
+        <state line="18" column="0" selection-start="707" selection-end="750" vertical-scroll-proportion="-4.7058825" vertical-offset="84" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
@@ -1050,7 +1045,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="46" selection-start="2388" selection-end="2388" vertical-scroll-proportion="-1.3013245" vertical-offset="1830" max-vertical-offset="2772">
+        <state line="110" column="63" selection-start="4561" selection-end="4561" vertical-scroll-proportion="0.16447368" vertical-offset="1830" max-vertical-offset="2772">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2054#2779#0" expanded="true" />
