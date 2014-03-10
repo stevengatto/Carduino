@@ -126,7 +126,7 @@
       <file leaf-file-name="ControllerFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="63" selection-start="4561" selection-end="4561" vertical-scroll-proportion="0.16447368" vertical-offset="1830" max-vertical-offset="2772">
+            <state line="148" column="0" selection-start="4336" selection-end="5968" vertical-scroll-proportion="1.9802631" vertical-offset="858" max-vertical-offset="2772">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2054#2779#0" expanded="true" />
@@ -581,7 +581,11 @@
       <created>1394424364337</created>
       <updated>1394424364337</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="This adds the functions at the request of the Scotland engineering team. &#10;We have modified the strings being sent for each command. They are as follows : &#10;String......Command&#10;=============&#10;       d......drive forward&#10;       b......backwards&#10;       p......park/stop/neutral (needs work) &#10;       f.......realign front wheels&#10;       l ......left&#10;       r.......right&#10;       &#10;The power button has also been configured to send a hello message to authenticate with the server. &#10;">
+      <created>1394424436411</created>
+      <updated>1394424436411</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1045,7 +1049,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fsc/Carduino/ControllerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="63" selection-start="4561" selection-end="4561" vertical-scroll-proportion="0.16447368" vertical-offset="1830" max-vertical-offset="2772">
+        <state line="148" column="0" selection-start="4336" selection-end="5968" vertical-scroll-proportion="1.9802631" vertical-offset="858" max-vertical-offset="2772">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2054#2779#0" expanded="true" />
