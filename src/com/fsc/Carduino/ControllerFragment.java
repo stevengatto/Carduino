@@ -47,7 +47,6 @@ public class ControllerFragment extends Fragment {
         View viewTreeRoot = inflater.inflate(R.layout.fragment_controller, container, false);
 
         // Set callbacks for all buttons
-
         Button powerButton = (Button) viewTreeRoot.findViewById(R.id.button_power);
         powerButton.setActivated(false);
         powerButton.setOnClickListener(new View.OnClickListener() {
@@ -56,14 +55,12 @@ public class ControllerFragment extends Fragment {
                 if (UDPMailMan.isRunning()) {
                     UDPMailMan.setRunningState(false);
                     powerButton.setBackgroundResource(R.drawable.button_power_off);
-
                 }
                 else {
                     UDPMailMan.setRunningState(true);
                     powerButton.setBackgroundResource(R.drawable.button_power);
-                    UDPMailMan.beginUdpLoop();
                     UDPMailMan.authenticate = true; //authenticate to the server
-                    UDPMailMan.authenticate = false; // stop sending authentication messages
+                    UDPMailMan.beginUdpLoop();
                 }
             }
         });
@@ -74,12 +71,10 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPMailMan.stop = false;  //quit stopping
                         UDPMailMan.forward = true; //go
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPMailMan.forward = false; //stop going
-                        UDPMailMan.stop = true; // stop
+                        UDPMailMan.stop = true;
                         break;
                 }
                 return true;
@@ -93,12 +88,10 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPMailMan.stop = false; // quit sending stop messages
                         UDPMailMan.reverse = true;//go
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPMailMan.reverse = false;//stop sending signal to go
-                        UDPMailMan.stop = true;//kill power
+                        UDPMailMan.stop = true;
                         break;
                 }
                 return true;
@@ -112,11 +105,10 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPMailMan.realign = false; //stop telling it to realign
                         UDPMailMan.left = true; //start turning left
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPMailMan.left = false; //stop sending left turn signals
+                        UDPMailMan.stop = true;
                         UDPMailMan.realign = true; //realign the wheels
                         break;
                 }
@@ -131,11 +123,10 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPMailMan.realign = false;
                         UDPMailMan.right = true;
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPMailMan.right = false; //stop sending right turn signals
+                        UDPMailMan.stop = true;
                         UDPMailMan.realign = true; //reset wheels to straight
                         break;
                 }

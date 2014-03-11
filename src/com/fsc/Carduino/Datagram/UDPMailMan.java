@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.net.*;
 
 /**
- * Sends UDP packets for you. Call {@link #beginUdpLoop()} to begin a loop that continuously sends out commands
- * as the state of the left, right, forward, and reverse boolean values changes in response to button events
+ * Sends UDP packets for you. Call {@link #beginUdpLoop()} to begin a loop that listens for command requests and
+ * sends them out.
  */
 public class UDPMailMan {
 
@@ -21,7 +21,7 @@ public class UDPMailMan {
     // The address to send to as an InetAddress Object
     private static InetAddress local;
 
-    // Current engaged directions
+    // True when the corresponding command needs to be sent out
     public static boolean forward = false;
     public static boolean reverse = false;
     public static boolean left = false;
@@ -64,10 +64,11 @@ public class UDPMailMan {
     }
 
     /**
-     * Initiates the main loop that continuously sends commands to the arduino
+     * Initiates the main loop that continuously sends commands
      */
     public static void beginUdpLoop() {
 
+        // Set up the socket based on provided port and ip address
         try {
             socket = new DatagramSocket(port);
             local = InetAddress.getByName(ipAddress);
@@ -87,90 +88,74 @@ public class UDPMailMan {
                 // Start looping the first time we're called
                 isRunning = true;
 
-                // While we're set to run, and while there is some command to send, loop and send appropriate packets
-                while (isRunning) {  // isRunning is set to false by the method setRunningState(false)
-                    try {
+                // Run in a loop and wait for commands to be sent out
+                while (isRunning) {
+                    if (forward) {
+                        String data = "d";
+                        int msg_length = data.length();
+                        byte[] message = data.getBytes();
+                        packet = new DatagramPacket(message, msg_length, local, port);
+                        logAndSendPacket(packet);
+                        forward = false;
 
+                    }
+                    else if (reverse) {
+                        String data = "b";
+                        int msg_length = data.length();
+                        byte[] message = data.getBytes();
+                        packet = new DatagramPacket(message, msg_length, local, port);
+                        logAndSendPacket(packet);
+                        reverse = false;
+                    }
 
-                        if (forward) {
-                            String data = "d";
-                            int msg_length=data.length();
-                            byte[] message = data.getBytes();
-                            packet = new DatagramPacket(message, msg_length, local,port);
-                            logAndSendPacket(packet);
+                    if (left) {
+                        String data = "l";
+                        int msg_length = data.length();
+                        byte[] message = data.getBytes();
+                        packet = new DatagramPacket(message, msg_length, local, port);
+                        logAndSendPacket(packet);
+                        left = false;
+                    }
 
-                        }
-                        else if(reverse) {
-                            String data = "b";
-                            int msg_length=data.length();
-                            byte[] message = data.getBytes();
-                            packet = new DatagramPacket(message, msg_length, local,port);
-                            logAndSendPacket(packet);
-                        }
+                    else if (right) {
+                        String data = "r";
+                        int msg_length = data.length();
+                        byte[] message = data.getBytes();
+                        packet = new DatagramPacket(message, msg_length, local, port);
+                        logAndSendPacket(packet);
+                        right = false;
+                    }
 
-                        if (left) {
-                            String data = "l";
-                            int msg_length=data.length();
-                            byte[] message = data.getBytes();
-                            packet = new DatagramPacket(message, msg_length, local,port);
-                            logAndSendPacket(packet);
+                    else if (stop) {
+                        String data = "p";
+                        int msg_length = data.length();
+                        byte[] message = data.getBytes();
+                        packet = new DatagramPacket(message, msg_length, local, port);
+                        logAndSendPacket(packet);
+                        stop = false;
+                    }
 
-                        }
-                        else if (right) {
-                            String data = "r";
-                            int msg_length = data.length();
-                            byte[] message = data.getBytes();
-                            packet = new DatagramPacket(message, msg_length, local, port);
-                            socket.send(packet);
-                        }
+                    else if (realign) {
+                        String data = "s";
+                        int msg_length = data.length();
+                        byte[] message = data.getBytes();
+                        packet = new DatagramPacket(message, msg_length, local, port);
+                        logAndSendPacket(packet);
+                        realign = false;
+                    }
 
-                        /*stop simply ends up killing power to the motor in a specific direction
-                          This must be sent every time you release a forward or back button */
-                        else if (stop) {
-                            String data = "p";
-                            int msg_length = data.length();
-                            byte[] message = data.getBytes();
-                            packet = new DatagramPacket(message, msg_length, local, port);
-                            socket.send(packet);
-                        }
-                        /*
-                            realign simply sends the signal "s" for straighten out the wheels by shifting the servo from
-                            80/100 degrees back to 90 degrees or straight ahead.
-                         */
-                        else if (realign) {
-                            String data = "s"; //we should
-                            int msg_length=data.length();
-                            byte[] message = data.getBytes();
-                            packet = new DatagramPacket(message, msg_length, local,port);
-                            socket.send(packet);
-                        }
-                        /*
-                            authenticate sends the "hello" authentication string to the Engineering UDP server
-                        */
-                        else if (authenticate) {
-                            String data = "hello"; //we should
-                            int msg_length = data.length();
-                            byte[] message = data.getBytes();
-                            packet = new DatagramPacket(message, msg_length, local, port);
-                            socket.send(packet);
-                        }
-
-
-                    } catch (SocketException e) {
-                        Log.e(TAG, "Socket exception!", e);
-                    } catch (UnknownHostException e) {
-                        Log.e(TAG, "UnknownHost exception!", e);
-                    } catch (IOException e) {
-                        Log.e(TAG, "IOexception!", e);
+                    else if (authenticate) {
+                        String data = "hello";
+                        int msg_length = data.length();
+                        byte[] message = data.getBytes();
+                        packet = new DatagramPacket(message, msg_length, local, port);
+                        logAndSendPacket(packet);
+                        authenticate = false;
                     }
                 }
-
                 return null;
-
-
             }
         }.execute();
-
     }
 
     /**
@@ -188,8 +173,5 @@ public class UDPMailMan {
                     "Exception: %s",
                     packet.toString(), e.toString()));
         }
-
     }
-
-
 }
