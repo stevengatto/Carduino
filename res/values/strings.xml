@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Carduino</string>
+
+    <!--Preferences-->
+    <string name="pref_category_host">Arduino Host Information</string>
+    <string name="pref_hostname_title">Host Name / IP Address</string>
+    <string name="pref_hostname_key">host_name</string>
+    <string name="pref_hostname_default">eng.umb.edu</string>
+    <string name="pref_hostname_summary">The host name (or IP address) of the Arduino wifi shield to connect to</string>
+    <string name="pref_hostport_title">Port</string>
+    <string name="pref_hostport_key">host_port</string>
+    <string name="pref_hostport_default">1720</string>
+    <string name="pref_hostport_summary">The port of the Arduino wifi shield to connect to</string>
+
 </resources>
+
+
+
+
+

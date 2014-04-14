@@ -7,18 +7,18 @@
             android:title="Arduino Host Information">
 
     <EditTextPreference
-            android:key="pref_key_host_ip"
-            android:title="IP Address"
-            android:summary="The IP address of the Arduino wifi shield to connect to"
-            android:dialogTitle="Host IP"/>
+            android:key="@string/pref_hostname_key"
+            android:title="@string/pref_hostname_title"
+            android:defaultValue="@string/pref_hostname_default"
+            android:dialogTitle="@string/pref_hostname_title"
+            android:summary="@string/pref_hostname_summary"/>
 
-    <EditTextPreference
-            android:key="pref_key_host_port"
-            android:title="Port"
-            android:summary="The port of the Arduino wifi shield to connect to"
-            android:dialogTitle="Host port"
-            android:inputType="number"/>
-
+        <EditTextPreference
+                android:key="@string/pref_hostport_key"
+                android:title="@string/pref_hostport_title"
+                android:defaultValue="@string/pref_hostport_default"
+                android:dialogTitle="@string/pref_hostport_title"
+                android:summary="@string/pref_hostport_summary"/>
 
     </PreferenceCategory>
 

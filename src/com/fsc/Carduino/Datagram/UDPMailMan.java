@@ -14,9 +14,18 @@ public class UDPMailMan {
 
     private static final String TAG = UDPMailMan.class.getName();
 
+    // Commands
+    public static final String COMMAND_FORWARD = "d";
+    public static final String COMMAND_REVERSE = "b";
+    public static final String COMMAND_LEFT = "l";
+    public static final String COMMAND_RIGHT = "r";
+    public static final String COMMAND_STOP = "p";
+    public static final String COMMAND_REALIGN = "s";
+    public static final String COMMAND_AUTH = "hello";
+
     // Ip address and port to send to
     public static int port = 0;
-    public static String ipAddress;
+    public static String hostName;
 
     // The address to send to as an InetAddress Object
     private static InetAddress local;
@@ -31,7 +40,7 @@ public class UDPMailMan {
     public static boolean authenticate = false;
 
     // Specifies whether the mail man is running
-    private static boolean isRunning = false;
+    public static boolean isRunning = false;
 
     // The socket to use for UDP communication
     private static DatagramSocket socket;
@@ -39,45 +48,22 @@ public class UDPMailMan {
     // The packet to send; we will reuse this object for each send to avoid unnecessary memory usage
     static DatagramPacket packet;
 
-    public static String getIpAddress() {
-        return ipAddress;
-    }
+    // Avoid creating additional async tasks
+    public static boolean asyncTaskRunning = false;
 
-    public static void setIpAddress(String ipAddress) {
-        UDPMailMan.ipAddress = ipAddress;
-    }
-
-    public static int getPort() {
-        return port;
+    public static void setHostName(String hostName) {
+        UDPMailMan.hostName = hostName;
     }
 
     public static void setPort(int port) {
         UDPMailMan.port = port;
     }
 
-    public static boolean isRunning() {
-        return isRunning;
-    }
-
-    public static void setRunningState(boolean isRunning) {
-        UDPMailMan.isRunning = isRunning;
-    }
 
     /**
      * Initiates the main loop that continuously sends commands
      */
     public static void beginUdpLoop() {
-
-        // Set up the socket based on provided port and ip address
-        try {
-            socket = new DatagramSocket(port);
-            local = InetAddress.getByName(ipAddress);
-        } catch (SocketException e) {
-            Log.e(UDPMailMan.class.getName(), String.format("Could not instantiate DatagramSocket object, " +
-                    "exception: %s", e.toString()));
-        } catch (UnknownHostException e) {
-            Log.e(UDPMailMan.class.getName(), "Unknown host exception", e);
-        }
 
         // Spawn a new thread to send UDP messages
         new AsyncTask<Void, Void, Void>() {
@@ -85,73 +71,54 @@ public class UDPMailMan {
             @Override
             protected Void doInBackground(Void... params) {
 
+                // Set up the socket based on provided port and ip address
+                try {
+                    socket = new DatagramSocket(port);
+                    local = InetAddress.getByName(hostName);
+                } catch (SocketException e) {
+                    Log.e(UDPMailMan.class.getName(), String.format("Could not instantiate DatagramSocket object, " +
+                            "exception: %s", e.toString()));
+                } catch (UnknownHostException e) {
+                    Log.e(UDPMailMan.class.getName(), "Unknown host exception", e);
+                }
+
+                // Avoid creating additional async tasks
+                asyncTaskRunning = true;
+
                 // Start looping the first time we're called
                 isRunning = true;
 
                 // Run in a loop and wait for commands to be sent out
                 while (isRunning) {
                     if (forward) {
-                        String data = "d";
-                        int msg_length = data.length();
-                        byte[] message = data.getBytes();
-                        packet = new DatagramPacket(message, msg_length, local, port);
-                        logAndSendPacket(packet);
-                        forward = false;
+                        logAndSendPacket(COMMAND_FORWARD);
 
                     }
                     else if (reverse) {
-                        String data = "b";
-                        int msg_length = data.length();
-                        byte[] message = data.getBytes();
-                        packet = new DatagramPacket(message, msg_length, local, port);
-                        logAndSendPacket(packet);
-                        reverse = false;
+                        logAndSendPacket(COMMAND_REVERSE);
                     }
 
                     if (left) {
-                        String data = "l";
-                        int msg_length = data.length();
-                        byte[] message = data.getBytes();
-                        packet = new DatagramPacket(message, msg_length, local, port);
-                        logAndSendPacket(packet);
-                        left = false;
+                        logAndSendPacket(COMMAND_LEFT);
                     }
 
                     else if (right) {
-                        String data = "r";
-                        int msg_length = data.length();
-                        byte[] message = data.getBytes();
-                        packet = new DatagramPacket(message, msg_length, local, port);
-                        logAndSendPacket(packet);
-                        right = false;
+                        logAndSendPacket(COMMAND_RIGHT);
                     }
 
                     else if (stop) {
-                        String data = "p";
-                        int msg_length = data.length();
-                        byte[] message = data.getBytes();
-                        packet = new DatagramPacket(message, msg_length, local, port);
-                        logAndSendPacket(packet);
+                        logAndSendPacket(COMMAND_STOP);
                         stop = false;
                     }
 
                     else if (realign) {
-                        String data = "s";
-                        int msg_length = data.length();
-                        byte[] message = data.getBytes();
-                        packet = new DatagramPacket(message, msg_length, local, port);
-                        logAndSendPacket(packet);
-                        realign = false;
+                        logAndSendPacket(COMMAND_REALIGN);
                     }
-
                     else if (authenticate) {
-                        String data = "hello";
-                        int msg_length = data.length();
-                        byte[] message = data.getBytes();
-                        packet = new DatagramPacket(message, msg_length, local, port);
-                        logAndSendPacket(packet);
+                        logAndSendPacket(COMMAND_AUTH);
                         authenticate = false;
                     }
+
                 }
                 return null;
             }
@@ -161,13 +128,16 @@ public class UDPMailMan {
     /**
      * Log an outgoing packet and send it
      *
-     * @param packet the packet to send
+     * @param message the message to send
      */
-    public static void logAndSendPacket(DatagramPacket packet) {
+    public static void logAndSendPacket(String message) {
+
+        DatagramPacket packet = new DatagramPacket(message.getBytes(), message.length(), local, port);
+
         try {
             socket.send(packet);
-            Log.d(UDPMailMan.class.getName(), String.format("Sent packet %s on port %d to address %s",
-                    packet.toString(), port, ipAddress));
+            Log.d(UDPMailMan.class.getName(), String.format("Sent packet %s on port %d to address %s " +
+                    "(resolved from name %s)", new String(packet.getData()), port, local.toString(), hostName));
         } catch (IOException e) {
             Log.e(UDPMailMan.class.getName(), String.format("Error! Exception occurred during sending of packet %s " +
                     "Exception: %s",

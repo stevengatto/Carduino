@@ -41,8 +41,10 @@ public class ControllerFragment extends Fragment {
 
         // Grab the IP and port from preferences
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        UDPMailMan.setPort(Integer.parseInt(prefs.getString(PREF_KEY_HOST_PORT, "2390")));
-        UDPMailMan.setIpAddress(prefs.getString(PREF_KEY_IP_ADDRESS, "127.0.0.0"));
+        String portPrefKey = getString(R.string.pref_hostport_key);
+        String namePrefKey = getString(R.string.pref_hostname_key);
+        UDPMailMan.setPort(Integer.parseInt(prefs.getString(portPrefKey, getString(R.string.pref_hostport_default))));
+        UDPMailMan.setHostName(prefs.getString(namePrefKey, getString(R.string.pref_hostname_default)));
 
         View viewTreeRoot = inflater.inflate(R.layout.fragment_controller, container, false);
 
@@ -52,15 +54,17 @@ public class ControllerFragment extends Fragment {
         powerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View powerButton) {
-                if (UDPMailMan.isRunning()) {
-                    UDPMailMan.setRunningState(false);
+                if (UDPMailMan.isRunning) {
+                    UDPMailMan.isRunning = false;
                     powerButton.setBackgroundResource(R.drawable.button_power_off);
                 }
                 else {
-                    UDPMailMan.setRunningState(true);
+                    UDPMailMan.isRunning = true;
                     powerButton.setBackgroundResource(R.drawable.button_power);
-                    UDPMailMan.authenticate = true; //authenticate to the server
+                    UDPMailMan.authenticate = true;
+                    // Start another async task loop
                     UDPMailMan.beginUdpLoop();
+
                 }
             }
         });
@@ -71,9 +75,10 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPMailMan.forward = true; //go
+                        UDPMailMan.forward = true;
                         break;
                     case MotionEvent.ACTION_UP:
+                        UDPMailMan.forward = false;
                         UDPMailMan.stop = true;
                         break;
                 }
@@ -88,9 +93,10 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPMailMan.reverse = true;//go
+                        UDPMailMan.reverse = true;
                         break;
                     case MotionEvent.ACTION_UP:
+                        UDPMailMan.reverse = false;
                         UDPMailMan.stop = true;
                         break;
                 }
@@ -105,11 +111,11 @@ public class ControllerFragment extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        UDPMailMan.left = true; //start turning left
+                        UDPMailMan.left = true;
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPMailMan.stop = true;
-                        UDPMailMan.realign = true; //realign the wheels
+                        UDPMailMan.left = false;
+                        UDPMailMan.realign = true;
                         break;
                 }
                 return true;
@@ -126,8 +132,8 @@ public class ControllerFragment extends Fragment {
                         UDPMailMan.right = true;
                         break;
                     case MotionEvent.ACTION_UP:
-                        UDPMailMan.stop = true;
-                        UDPMailMan.realign = true; //reset wheels to straight
+                        UDPMailMan.right = false;
+                        UDPMailMan.realign = true;
                         break;
                 }
                 return true;
